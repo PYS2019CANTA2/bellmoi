@@ -12,6 +12,10 @@ import 'package:bellmoi/src/widgets/utils.dart' as utils;
 
 //final FirebaseAuth _auth = FirebaseAuth.instance;
 //final GoogleSignIn _googleSignIn = GoogleSignIn();
+import 'dart:async';
+import 'package:flutter/services.dart';
+
+const platform = const MethodChannel("open_android_native_camera_activity");
 
 class HomePage extends StatefulWidget {
 
@@ -269,7 +273,8 @@ class _HomePageState extends State<HomePage>
                       onPressed: () {
                        // utils.showAlertDialog(context, 'Muy Pronto', 'Estara disponible la funcionalidad del boton --> CAMERA');
                         //utils.goPage(context, PrincipalCamera());
-                        utils.goPage(context, CameraScreen());
+                        _getNewActivity();
+                       // utils.goPage(context, CameraScreen());
                       },
                     ),
                   )
@@ -281,6 +286,15 @@ class _HomePageState extends State<HomePage>
       )
     );
   }
+
+_getNewActivity() async {
+  try {
+    await platform.invokeMethod('startCameraActivity');
+  } on PlatformException catch (e) {
+    print(e.message);
+  }
+}
+
 /*
   void _signOutGoogle() async {
     await _googleSignIn.signOut();
