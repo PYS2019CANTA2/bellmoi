@@ -1,1 +1,6 @@
-<resources></resources>
+<resources>
+    <string name="dropTable">dropTable</string>
+    <string name="service">Service</string>
+    <string name="nuevo">Nuevo</string>
+    <string name="nuevoDos">Nuevo Dos</string>
+</resources>
