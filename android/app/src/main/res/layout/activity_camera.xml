@@ -9,7 +9,14 @@
 
     <include
         android:id="@+id/toolbar"
-        layout="@layout/toolbar" />
+        layout="@layout/toolbar"
+        android:addStatesFromChildren="false"
+        android:clipChildren="true"
+        android:visibility="visible"
+        app:logo="@mipmap/logo"
+        app:navigationIcon="@mipmap/abc_ic_ab_back_mtrl_am_alpha"
+        app:title=''
+        tools:visibility="visible" />
 
     <TextView
         android:layout_width="wrap_content"

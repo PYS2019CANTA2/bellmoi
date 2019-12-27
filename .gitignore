@@ -38,6 +38,8 @@
 **/android/local.properties
 **/android/**/GeneratedPluginRegistrant.java
 
+
+
 # iOS/XCode related
 **/ios/**/*.mode1v3
 **/ios/**/*.mode2v3
@@ -71,3 +73,16 @@
 !**/ios/**/default.pbxuser
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+
+
+.flutter-plugins-dependencies
+/android/.settings/org.eclipse.buildship.core.prefs
+/android/app/src/main/AndroidManifest.xml
+
+/android/build.gradle
+/android/app/build.gradle
+/android/gradle.properties
+/android/openCVLibrary349/.classpath
+/android/openCVLibrary349/.project
+/android/openCVLibrary349/.settings/org.eclipse.buildship.core.prefs
+pubspec.lock
